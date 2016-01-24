@@ -20,21 +20,21 @@ void main(){
 	while(1){
 		OCR1A = v_1/15*153;
 		OCR1B = v_2/15*153;
-//		if (flag1 == 0){
-//			v_1++;
-//			if (v_1 == 15) flag1 = 1;
-//		}else if (flag1 == 1){
-//			v_1--;
-//			if (v_1 == 0) flag1 = 0;
-//		}
-//		
-//		if (flag2 == 0){
-//			v_2++;
-//			if (v_2 == 15) flag2 = 1;
-//		}else if (flag2 == 1){
-//			v_2--;
-//			if (v_2 == 0) flag2 = 0;
-//		}
+		if (flag1 == 0){
+			v_1++;
+			if (v_1 == 15) flag1 = 1;
+		}else if (flag1 == 1){
+			v_1--;
+			if (v_1 == 0) flag1 = 0;
+		}
+		
+		if (flag2 == 0){
+			v_2++;
+			if (v_2 == 15) flag2 = 1;
+		}else if (flag2 == 1){
+			v_2--;
+			if (v_2 == 0) flag2 = 0;
+		}
 		_delay_ms(10);
 	}
 }
