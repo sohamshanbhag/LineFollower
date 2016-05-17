@@ -18,8 +18,8 @@ void main(){
 	uint8_t flag1 = 0, flag2 = 0;
 
 	while(1){
-		OCR1A = v_1/15*153;
-		OCR1B = v_2/15*153;
+		OCR1A = v_1/15*255;
+		OCR1B = v_2/15*255;
 		if (flag1 == 0){
 			v_1++;
 			if (v_1 == 15) flag1 = 1;
@@ -35,6 +35,5 @@ void main(){
 			v_2--;
 			if (v_2 == 0) flag2 = 0;
 		}
-		_delay_ms(10);
 	}
 }

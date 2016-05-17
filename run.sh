@@ -19,12 +19,12 @@ if [$1 -eq $NULL]; then
 	echo " "
 	echo "Usage: ./run.sh codename.c"
 else	
-	avr-gcc -g -Os -mmcu=atmega32 -c $test.c
-	avr-gcc -g -mmcu=atmega32 -o $test.elf $test.o
+	avr-gcc -g -Os -mmcu=atmega16 -c $test.c
+	avr-gcc -g -mmcu=atmega16 -o $test.elf $test.o
 	avr-objcopy -j .text -j .data -O ihex $test.elf $test.hex
 
 	echo ""
 	echo "Compilation Successful, Now Burning"
 
-	avrdude -p m32 -c usbasp -P usb -e -U flash:w:$test.hex
+	avrdude -p m16 -c usbasp -P usb -e -U flash:w:$test.hex
 fi
